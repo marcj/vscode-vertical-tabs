@@ -4,6 +4,8 @@
 Since VSCode does not allow to configure the editor tabs and I need them to be vertical (because I usually have a lot of open files), 
 I wrote a little CSS/JS to have that feature. It's not perfect and more hacky than necessary, but I don't have the time to wrap it in a official extension. 
 
+![screenshot](https://github.com/marcj/vscode-vertical-tabs/blob/main/vscode-vertical-tabs.png?raw=true)
+
 So you have to copy und paste this code and load it via the extension [Cusom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css)
 
 Install it and place following code in your settings.json:
