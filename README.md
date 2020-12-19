@@ -21,13 +21,16 @@ Install it and place following code in your settings.json:
 
 tabs.css
 
-```
+```body {
+    --vertical-bar-width: 200px;
+}
+
 .editor-container {
     display: flex;
 }
 
 .editor-container .tabs-container {
-    flex: 0 0 200px;
+    flex: 0 0 var(--vertical-bar-width);
 }
 
 .editor-container .tabs-container .tab .tab-actions {
@@ -40,7 +43,7 @@ tabs.css
     white-space: nowrap;
     align-items: center;
     cursor: pointer;
-    height: 26px;
+    height: 26px;   
     box-sizing: border-box;
     padding-left: 10px;
     border-bottom: 1px solid #c0c0c00a;
@@ -60,6 +63,24 @@ tabs.css
 
 .monaco-workbench .monaco-editor {
     margin-top: 0 !important;
+}
+
+.minimap.slider-mouseover {
+    transform: translateX(calc(var(--vertical-bar-width) * -1));
+}
+
+.monaco-scrollable-element.editor-scrollable.vs-dark {
+    width: calc(100% - 66px) !important;
+}
+ 
+.monaco-workbench .monaco-editor,
+.monaco-workbench .overflow-guard {
+    max-width: 100%;
+}
+
+.editor-container .editor-instance {
+    flex: 1;
+    overflow: hidden;
 }
 ```
 
