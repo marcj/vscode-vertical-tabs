@@ -21,7 +21,8 @@ Install it and place following code in your settings.json:
 
 tabs.css
 
-```body {
+```
+body {
     --vertical-bar-width: 200px;
 }
 
